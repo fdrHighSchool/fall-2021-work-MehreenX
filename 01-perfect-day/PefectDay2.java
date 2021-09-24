@@ -25,12 +25,3 @@ public class PerfectDay2 {
     System.out.printlin("Watch Netflix until I fall asleep");
   }// end night medthod
 }// end class
-
-//Wake up at 10:00am in the morning
-//Make some pancakes with blueberries and have a coffee
-//Go out for a walk around the neighborhood for 30mins
-
-/*In the afternoon
-Make plans with my friends
-Drink bubble tea
-*/
