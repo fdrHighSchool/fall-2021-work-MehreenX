@@ -1,5 +1,5 @@
 import java.util.Scanner; //importing scanner class
-public class RamdomNumber {
+public class RandomNumber {
   public static void main(String[] args) {
     Scanner Num = new Scanner(System.in);
     //variables for the range
@@ -17,7 +17,7 @@ public class RamdomNumber {
       //program output
       if(userAns == random_int){
         System.out.println("Yay, you did it T^T");
-      }
+          }
       //when user guesses lower than the chosen number
       if(userAns < random_int){
         System.out.println("WRONGG, picked too low...");
@@ -26,6 +26,10 @@ public class RamdomNumber {
       if(userAns > random_int){
         System.out.println("WRONGGG, picked too high...");
       }
+      while (userAns != random_int && userAns == random_int){
+
+            System.out.println("Try Again");
+          }
     }
 
 }
