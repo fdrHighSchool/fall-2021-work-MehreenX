@@ -6,10 +6,14 @@ public class RandomNumber {
     int min = 1;
     int max = 12;
 
+
+
     //Generate random int value from 1 to 6
       System.out.println("Pick a random number from "+min+" to "+max+ ":");
       //user input
       int userAns = Num.nextInt();
+
+
 
       //set answer
       int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
@@ -29,7 +33,10 @@ public class RandomNumber {
       while (userAns != random_int && userAns == random_int){
 
             System.out.println("Try Again");
-          }
+
+
+      
+    }
     }
 
 }
