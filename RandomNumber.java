@@ -1,5 +1,5 @@
 import java.util.Scanner; //importing scanner class
-class public class {
+public class RandomNumber {
   public static void main(String[] args) {
       Scanner Num = new Scanner(System.in);
     //variables for the range
