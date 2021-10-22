@@ -1,0 +1,6 @@
+# Processing
+* Making Triangles with 6 points
+* Using Rect() to make squares
+* Using fill() to color in
+* Making circles using 3 points
+* Making a background using "int gridSize"
