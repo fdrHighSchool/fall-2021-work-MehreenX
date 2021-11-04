@@ -1,54 +1,65 @@
 // imports
 import java.util.*;
 
-public class coordinatePlane {
+public class CoordinatePlane {
   public static void main(String[] args) {
     // instantiate a scanner object
     Scanner s = new Scanner(System.in);
 
-System.out.println("which of the following do you want?)");
-System.out.print("1. Distance calculator /n2. Area calculator/n");
+    System.out.println("Which of the following do you want?");
+    System.out.print("1. Distance calculator \n2. Area calculator\n");
 
-int choice =s.nextInt();
+    int choice = s.nextInt();
 
-if (choice ==1) {
-  distance();
-}//end of if statement
-else {
-  area();
-}
+    if (choice == 1) {
+      distance();
+    } // end if statement
+    else {
+      area();
+    } // end else statement
 
-}// end main area method
+  }// end main method
 
-public static void distance() {
-  Scanner s = new Scanner(System.in);
-  System.out.print("please input a coordinate: ");
-  String point1 = s.nextLine();
+  public static void distance() {
+    Scanner s = new Scanner(System.in);
 
-  int x1 = getX(point1);
-  int y1 = getY(point1);
+    System.out.print("please input a coordinate: ");
+    String point1 = s.nextLine();
 
-  System.out.print("please input another coordinate: ");
-  String point2 = s.nextLine();
+    int x1 = getX(point1);
+    int y1 = getY(point1);
 
-  int x2 = getX(point2);
-  int y2 = getY(point2);
+    System.out.print("please input another coordinate: ");
+    String point2 = s.nextLine();
 
-  crowsDistance(x1, y1, x2, y2);
-  taxicabDistance(x1, y1, x2, y2);
+    int x2 = getX(point2);
+    int y2 = getY(point2);
 
-}
-public static void Area(){
-  Scanner s = new Scanner(System.in);
+    crowsDistance(x1, y1, x2, y2);
+    taxicabDistance(x1, y1, x2, y2);
 
-  System.out.println("What shape do you want to know the area of?")
-  System.out.print("1.Square/n");
+    System.out.println(slope(x1, y1, x2, y2));
+  }
 
-  int choice = s.nextInt();
+  public static void area() {
+    Scanner s = new Scanner(System.in);
 
-  if (choice == 1)
-   square();
-}// end if statement
+    System.out.println("What shape do you want to know the area of?");
+    System.out.print("1. Square\n");
+
+    int choice = s.nextInt();
+
+    if (choice == 1) {
+      square();
+    } // end if statement
+
+
+  } // end area method
+
+  public static void square() {
+    Scanner s = new Scanner(System.in);
+
+  } // end square method
 
   /*
    * Name: getX
@@ -108,5 +119,20 @@ public static void Area(){
     System.out.println("The taxicab distance between the two points is: " + distance);
 
   }// end taxicabDistance method
+
+  /*
+  N: slope
+  P: calculate the slope between two points
+  I: 2 points, already parsed (4 ints)
+  R: a double
+  */
+  public static double slope(int x1, int y1, int x2, int y2) {
+    // formula: (y2 - y1) / (x2 - x1)
+    if (x1 != x2) {
+      return (y2 - y1) / (x2 - x1);
+    }
+
+    return 0.0;
+  } // end slope method
 
 }// end class
