@@ -14,8 +14,8 @@ public class FracCalc {
         // TODO: Read the input from the user and call produceAnswer with an equation
         Scanner s = new Scanner(System.in);
         // Checkpoint 1: Create a Scanner, read one line of input, pass that input to produceAnswer, print the result.
-        int choice = s.nextInt();
-        if 
+        String choice = s.nextLine();
+        produceAnswer(choice);
         // Checkpoint 2: Accept user input multiple times.
     }//end main method
 
@@ -27,9 +27,11 @@ public class FracCalc {
      *      Example: return ==> "1_1/4"
      */
     public static String produceAnswer(String input){
-      string operation = get
+        Scanner s = new Scanner(System.in)
         // TODO: Implement this function to produce the solution to the input
         // Checkpoint 1: Return the second operand.  Example "4/5 * 1_2/4" returns "1_2/4".
+        InputEqualtion = s.nextLine();
+        
         // Checkpoint 2: Return the second operand as a string representing each part.
         //               Example "4/5 * 1_2/4" returns "whole:1 numerator:2 denominator:4".
         // Checkpoint 3: Evaluate the formula and return the result as a fraction.
