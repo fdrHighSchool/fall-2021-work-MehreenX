@@ -9,7 +9,7 @@ public class FracCalc {
      */
     public static void main(String[] args)
     System.out.println("Fraction calculator: +, -, x, /");
-    System.out.print()
+    //System.out.print()
 
         // TODO: Read the input from the user and call produceAnswer with an equation
         Scanner s = new Scanner(System.in);
@@ -25,13 +25,15 @@ public class FracCalc {
      *      Example: input ==> "1/2 + 3/4"
      * @return the result of the fraction after it has been calculated.
      *      Example: return ==> "1_1/4"
-     */
-    public static String produceAnswer(String input){
-        Scanner s = new Scanner(System.in)
+    */
+  }
+   public static String produceAnswer(String input){
         // TODO: Implement this function to produce the solution to the input
         // Checkpoint 1: Return the second operand.  Example "4/5 * 1_2/4" returns "1_2/4".
-        InputEqualtion = s.nextLine();
+        String Frac1 = choice.substring(0, input.indexOf(" "));
+        String Frac2 = choice.substring(input.indexOf(" ")+ 3);
         
+
         // Checkpoint 2: Return the second operand as a string representing each part.
         //               Example "4/5 * 1_2/4" returns "whole:1 numerator:2 denominator:4".
         // Checkpoint 3: Evaluate the formula and return the result as a fraction.
