@@ -28,12 +28,18 @@ public class FracCalc {
     */
   }
    public static String produceAnswer(String input){
-        // TODO: Implement this function to produce the solution to the input
-        // Checkpoint 1: Return the second operand.  Example "4/5 * 1_2/4" returns "1_2/4".
-        String Frac1 = choice.substring(0, input.indexOf(" "));
-        String Frac2 = choice.substring(input.indexOf(" ")+ 3);
-        
 
+        int space = indexOf(" ");
+        String Frac1 = choice.substring(0,space);
+        String sign = choice.substring(space + 1, space + 2);
+        String Frac2 = choice.substring(space + 3);
+
+        System.out.println(Frac1);
+        System.out.println(Frac2);
+        return Frac2;
+
+       // TODO: Implement this function to produce the solution to the input
+       // Checkpoint 1: Return the second operand.  Example "4/5 * 1_2/4" returns "1_2/4".
         // Checkpoint 2: Return the second operand as a string representing each part.
         //               Example "4/5 * 1_2/4" returns "whole:1 numerator:2 denominator:4".
         // Checkpoint 3: Evaluate the formula and return the result as a fraction.
@@ -42,7 +48,8 @@ public class FracCalc {
         // Final project: All answers must be reduced.
         //               Example "4/5 * 1_2/4" returns "1_1/5".
 
-        return "";
+
+
     }//end produceAnswer method
 
     // TODO: Fill in the space below with helper methods
