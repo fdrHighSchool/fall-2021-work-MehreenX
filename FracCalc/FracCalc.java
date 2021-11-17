@@ -53,12 +53,14 @@ public class FracCalc {
   }//end produceAnswer method
 
   public static int getNum(String Frac){
-    int slash = input.indexof("/");
-    String num1 = input.substring(0,slash);
-    String num2 = input.substring(space + 3, slash);
+      int slash = input.indexof("/");
+      int us = input.indexof("_");
+    if (frac.indexOf("_")!= -1){
 
-    System.out.println(num1);
-    System.out.println(num2);
+      int Num1 = 0;
+
+     return Num1;
+    }
 
   }
 
