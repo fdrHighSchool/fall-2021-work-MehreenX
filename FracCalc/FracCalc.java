@@ -3,19 +3,15 @@ import java.util.*;
 
 public class FracCalc {
 
-  /**
-   * Prompts user for input, passes that input to produceAnswer, then outputs the result.
-   * @param args - unused
-   */
   public static void main(String[] args){
     System.out.println("Fraction calculator: +, -, x, /");
-    //System.out.print()
 
     // TODO: Read the input from the user and call produceAnswer with an equation
     Scanner s = new Scanner(System.in);
     // Checkpoint 1: Create a Scanner, read one line of input, pass that input to produceAnswer, print the result.
     String choice = s.nextLine();
     System.out.println(produceAnswer(choice));
+    // System.out.println("Numerator:" + getNum(choice));
     // Checkpoint 2: Accept user input multiple times.
   }//end main method
 
@@ -34,8 +30,11 @@ public class FracCalc {
       String sign = input.substring(space + 1, space + 2);
       String Frac2 = input.substring(space + 3);
 
-      getNum(Frac1);
+      int num1 = getNum(Frac1);
+      int num2 = getNum(Frac2);
 
+      int den1 = getDen(Frac1);
+      int den2 = getDen(Frac2);
       return Frac2;
 
      // TODO: Implement this function to produce the solution to the input
@@ -53,17 +52,27 @@ public class FracCalc {
   }//end produceAnswer method
 
   public static int getNum(String Frac){
-      int slash = input.indexof("/");
-      int us = input.indexof("_");
-    if (frac.indexOf("_")!= -1){
-
-      int Num1 = 0;
-
-     return Num1;
+      int slash = Frac.indexOf("/");
+      int Unders = Frac.indexOf("_");
+    // a mixed number
+    if (Frac.indexOf("_")!= -1){
+      return Integer.parseInt(Frac.substring(Unders+1,slash));
     }
+
+    // a regular frac (a/b)
+    else if (slash != -1){
+      return Integer.parseInt(Frac.substring(0,slash));
+    }
+
+    // not a mixed number (a)
+    else {
+        return Integer.parseInt(Frac);
+      }
 
   }
 
+ public static int getDen(String Frac);
+   if (slash)
   // TODO: Fill in the space below with helper methods
 
   /**
