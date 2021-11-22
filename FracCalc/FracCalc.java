@@ -30,9 +30,9 @@ public class FracCalc {
       int den1 = getDen(Frac1);
       int den2 = getDen(Frac2);
 
-      int W1 = getWhole(Frac1);
-      int W2 = getWhole(Frac2);
-      int operation = getOperation();
+      int Whole1 = getWhole(Frac1);
+      int Whole2 = getWhole(Frac2);
+      int Operation  = getOperation(num1, den1, num2, dem2);
 
       return Frac2;
 
@@ -67,6 +67,7 @@ public class FracCalc {
  }
  else{
    return Integer.parseInt(Frac.substring(slash+1));// there's a slash, take dem
+   
   }
  }
 
@@ -86,11 +87,16 @@ public class FracCalc {
        return (whole * den + num);
   }
 
-  public static int getoperation(int Frac1, int Frac2){
-    if (operation.equals("-")){
-        return output = Frac1.subtract(Frac2);
-  }
 
+  public static String getOperation(int num1, int den1, int num2, int dem2){
+    int addNum = (num1*den2) + (num2*den1);
+    int commonDen = (den1 * den2);
+    if (operation.equals("+")){
+        return addNum ;
+  }else {
+        return commonDen ;
+  }
+}
 
   //public static int greatestCommonDivisor(int a, int b){
     //return 0;
@@ -99,6 +105,6 @@ public class FracCalc {
 
   //public static int leastCommonMultiple(int a, int b){
     //return 0;
-  }//end leastCommonMultiple
+  //}//end leastCommonMultiple
 
 }//end class
