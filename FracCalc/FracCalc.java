@@ -29,9 +29,13 @@ public class FracCalc {
 
     int Whole1 = getWhole(Frac1);
     int Whole2 = getWhole(Frac2);
-    int Operation = getOperation(num1, den1, num2, dem2);
 
-    return Frac2;
+    num1 += Whole1 * den1;
+    num2 += Whole2 * den2;
+
+    String ans = doMath(num1, den1, num2, den2, sign);
+
+    return ans;
 
   }// end produceAnswer method
 
@@ -80,18 +84,22 @@ public class FracCalc {
     return (whole * den + num);
   }
 
-  public static String getOperation(int num1, int den1, int num2, int dem2) {
-    //int addNum = (num1 * den2) + (num2 * den1);
-    //int commonDen = (den1 * den2);
-    //if (operation.equals("+")) {
-   //   return addNum;
-   // } else {
-   //   return commonDen;
-    if (Operation.equals("*")){
-      return ((num1 * num2) / (den1 * den2));
+  public static String doMath(int num1, int den1, int num2, int den2, String operation) {
+    if (operation.equals("+")) {
+      int addNum = (num1 * den2) + (num2 * den1);
+      int commonDen = (den1 * den2);
+      return addNum + "/" + commonDen;
     }
-    else if (Operation.equals("/")){
-      return((num1 * dem2) / (num2 * den1));
+    else if (operation.equals("-")) {
+      int addNum = (num1 * den2) - (num2 * den1);
+      int commonDen = (den1 * den2);
+      return addNum + "/" + commonDen;
+    }
+    else if (operation.equals("*")){
+      return ((num1 * num2) + "/" + (den1 * den2));
+    }
+    else {
+      return((num1 * den2) + "/" + (num2 * den1));
      }
   }
 
