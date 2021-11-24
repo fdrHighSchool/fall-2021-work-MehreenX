@@ -86,22 +86,52 @@ public class FracCalc {
 
   public static String doMath(int num1, int den1, int num2, int den2, String operation) {
     if (operation.equals("+")) {
-      int addNum = (num1 * den2) + (num2 * den1);
-      int commonDen = (den1 * den2);
-      return addNum + "/" + commonDen;
+      int finalNumerator = (num1 * den2) + (num2 * den1);
+      int finalDenominator = (den1 * den2);
+      return reduce(finalNumerator, finalDenominator);
     }
     else if (operation.equals("-")) {
-      int addNum = (num1 * den2) - (num2 * den1);
-      int commonDen = (den1 * den2);
-      return addNum + "/" + commonDen;
+      int finalNumerator  = (num1 * den2) - (num2 * den1);
+      int finalDenominator  = (den1 * den2);
+      return reduce(finalNumerator, finalDenominator);
     }
     else if (operation.equals("*")){
-      return ((num1 * num2) + "/" + (den1 * den2));
+      int finalNumerator = num1 * num2;
+      int finalDenominator = den1 * den2;
+      return reduce(finalNumerator, finalDenominator);
     }
     else {
-      return((num1 * den2) + "/" + (num2 * den1));
+      int finalNumerator = (num1 * den2);
+      int finalDenominator = (num2 * den1);
+      return reduce(finalNumerator, finalDenominator);
      }
   }
+
+  public static String reduce(int numerator, int denominator) {
+    for(int i=denominator; i>1; i--) {
+      if(((numerator % i) == 0) && ((denominator % i) == 0)) {
+        numerator = numerator / i;
+        denominator = denominator / i;
+        i = -1;
+      }
+    }
+    //return numerator + "/" + denominator;
+ int wholeNum = numerator / denominator;
+ int mixedFrac = numerator % denominator;
+
+if (numerator == 0) {
+  return "0";
+}
+if (wholeNum == 0){
+  return mixedFrac + "/" + denominator;
+}else if(mixedFrac == 0) {
+  return Integer.toString(wholeNum);
+}else{
+  return wholeNum + "_" + mixedFrac + "/" + denominator;
+}
+
+}
+
 
   // public static int greatestCommonDivisor(int a, int b){
   // return 0;
