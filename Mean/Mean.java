@@ -26,13 +26,3 @@ public class Mean{
   }
 
 
-
-
-
-
-
-
-  }
-
-
-}
