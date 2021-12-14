@@ -19,19 +19,19 @@ public class Mean{
        arry[9] = 8;
        System.out.print("2,2,3,4,5,5,6,7,8,8");
 
-  for(int i = 0; i < 100; i++) {
-      int value = (int)(math.random()*100 + 1);
+  //for(int i = 0; i < 100; i++) {
+    //  int value = (int)(math.random()*100 + 1);
 
-         randomArray[i] = value
-           System.out.println(average(randomArray));
+//         randomArray[i] = value
+  //         System.out.println(average(randomArray));
 }
   //calculation of  mean
     int total = (2+2+3+4+5+5+6+7+8+8);
     int mean = total / arry.length;
     System.out.println("Mean = " + mean);
 
-  public static Double average(int[] arr){
-    double total = 0.0;
+  //public static Double average(int[] arr){
+    //double total = 0.0;
   }
 
 
