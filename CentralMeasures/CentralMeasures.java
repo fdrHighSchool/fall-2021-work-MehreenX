@@ -10,7 +10,10 @@ public class CentralMeasures {
 
      int[] testArr = {9, 11, 8, 12, 7, 13, 5, 15, 12, 8};
 
+     System.out.println(testArr);
      System.out.println(mode(testArr));
+     System.out.println("average: " + avg(testArr));
+     System.out.println("range: " + range(testArr));
    }
 
    //Average
@@ -45,7 +48,7 @@ public class CentralMeasures {
     else{
       for(int i = 0; i < freq.length; i++){
         if(freq[i] == maxRep){
-          return "" + i;
+          return "mode:" + i;
         }
       }
     }
@@ -74,6 +77,14 @@ public class CentralMeasures {
       }
     }
     return min;
+  }
+
+  public static int range(int[] arr){
+    return (findMax(arr) - findmin(arr));
+  }
+
+  public static int median(int[] arr){
+
   }
 
 }// class
