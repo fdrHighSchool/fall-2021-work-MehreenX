@@ -84,6 +84,16 @@ public class CentralMeasures {
   }
 
   public static int median(int[] arr){
+    int min = arr[i];
+    int minLoc = i;
+    int temp = arr[i];
+    for (int j = i + 1; j < arr.length; j++) {
+      if(arr[j] < min) {  // min
+          min = arr[j];
+          minLoc = j;
+      }
+    }
+  return arr;
 
   }
 
