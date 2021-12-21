@@ -14,6 +14,7 @@ public class CentralMeasures {
      System.out.println(mode(testArr));
      System.out.println("average: " + avg(testArr));
      System.out.println("range: " + range(testArr));
+     System.out.println("median: " + median(testArr));
    }
 
    //Average
@@ -83,18 +84,28 @@ public class CentralMeasures {
     return (findMax(arr) - findmin(arr));
   }
 
-  public static int median(int[] arr){
-    int min = arr[i];
-    int minLoc = i;
-    int temp = arr[i];
-    for (int j = i + 1; j < arr.length; j++) {
-      if(arr[j] < min) {  // min
-          min = arr[j];
-          minLoc = j;
+  public static double median(int[] arr){
+   for(int j = 0; j<arr.length; j++){
+    int min = arr[j];
+    int minLoc = j; // location
+    int temp = arr[j];
+    for (int i = j + 1; i < arr.length; i++) {
+      if(arr[i] < min) {  // min
+          min = arr[i];
+          minLoc = i;
+   }
       }
-    }
-  return arr;
 
+    arr[j] = min;
+    arr[minLoc] = temp;
+    }
+ if (arr.length % 2 == 0){
+    return ((double)(arr[arr.length/2] + arr[arr.length/2-1]) / 2);
+ }else{
+    return (arr[arr.length/2]);
   }
+
+
+}//end median
 
 }// class
