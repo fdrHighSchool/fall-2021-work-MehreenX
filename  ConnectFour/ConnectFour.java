@@ -12,6 +12,9 @@ public class ConnectFour {
     fillBoard(board);
     displayBoard(board);
 
+    playRound(userInput, board);
+    displayBoard(board);
+
   } // end main method
 
   public static void fillBoard(String[][] board) {
@@ -30,6 +33,12 @@ public class ConnectFour {
       System.out.println();
     } // end outer for loop
   } // end displayBoard method
+
+  public static String PlayRound(int input, String[] borad){
+     for(int i = board.length - 1; i >= 0; i--) {
+     }//end PlayRound
+     return borad;
+  }
 
 
 } // end class
