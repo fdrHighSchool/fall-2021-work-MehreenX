@@ -2,18 +2,26 @@ import java.util.*;
 
 public class ConnectFour {
   public static void main(String[] args) {
-    System.out.println("Lets play!! Put a X or O with the row and column number :");
     Scanner s = new Scanner(System.in);
     String Userinput = s.nextLine();
 
     String[][] board = new String[6][7];
 
-    //System.out.println(Arrays.deepToString(board));
+    System.out.println("\u001B[32mConnect Four!\nPress enter to start.");
+    s.nextLine();
+
     fillBoard(board);
     displayBoard(board);
 
-    playRound(userInput, board);
-    displayBoard(board);
+    // example, player 1 chooses col 3
+    //board[5][2] = "[X]";
+    //s.nextLine();
+    //displayBoard(board);
+
+    // player 2 also chooses col 3
+    //board[4][2] = "[O]";
+    //s.nextLine();
+    //displayBoard(board);
 
   } // end main method
 
@@ -34,10 +42,13 @@ public class ConnectFour {
     } // end outer for loop
   } // end displayBoard method
 
-  public static String PlayRound(int input, String[] borad){
+  public static String[][] PlayRound(int input, String[][] board){
      for(int i = board.length - 1; i >= 0; i--) {
+       if(board[i][input - 1] == "[ ]") {
+         board[i][input - 1] = "[x]";
+       }
      }//end PlayRound
-     return borad;
+     return board;
   }
 
 
