@@ -13,6 +13,9 @@ public class ConnectFour {
     fillBoard(board);
     displayBoard(board);
 
+    PlayRound(Userinput, board);
+    displayBoard(board);
+
     // example, player 1 chooses col 3
     //board[5][2] = "[X]";
     //s.nextLine();
@@ -42,14 +45,9 @@ public class ConnectFour {
     } // end outer for loop
   } // end displayBoard method
 
-  public static String[][] PlayRound(int input, String[][] board){
-     for(int i = board.length - 1; i >= 0; i--) {
-       if(board[i][input - 1] == "[ ]") {
-         board[i][input - 1] = "[x]";
-       }
-     }//end PlayRound
-     return board;
-  }
+ public static String[][] playTurn(int col, String[][] board, int player){
+   
 
+// }//end playTurn
 
 } // end class
