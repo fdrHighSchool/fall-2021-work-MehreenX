@@ -46,7 +46,10 @@ public class ConnectFour {
   } // end displayBoard method
 
  public static String[][] playTurn(int col, String[][] board, int player){
+   int p1 = 0;
+   p1 = s.nextInt();
    
+
 
 // }//end playTurn
 
