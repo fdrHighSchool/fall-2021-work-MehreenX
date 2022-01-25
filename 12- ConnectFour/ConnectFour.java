@@ -3,18 +3,18 @@ import java.util.*;
 public class ConnectFour {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
-    String Userinput = s.nextLine();
-
     String[][] board = new String[6][7];
 
     System.out.println("\u001B[32mConnect Four!\nPress enter to start.");
-    s.nextLine();
-
+    int Userinput = s.nextInt();
+    String player = "";
     fillBoard(board);
+    //displayBoard(board);
+
+    playTurn(Userinput, board);
     displayBoard(board);
 
-    PlayRound(Userinput, board);
-    displayBoard(board);
+
 
     // example, player 1 chooses col 3
     //board[5][2] = "[X]";
@@ -45,12 +45,14 @@ public class ConnectFour {
     } // end outer for loop
   } // end displayBoard method
 
- public static String[][] playTurn(int col, String[][] board, int player){
-   int p1 = 0;
-   p1 = s.nextInt();
-   
-
-
-// }//end playTurn
+ public static String[][] playTurn(int col, String[][] board){
+   for(int i = board.length - 1; i >= 0; i--) {
+        if(board[i][col - 1] == "[ ]") {
+          board[i][col - 1] = "[X]";
+          break;
+        }
+    }
+   return board;
+ }//end playTurn
 
 } // end class
