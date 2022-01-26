@@ -5,7 +5,8 @@ public class ConnectFour {
     Scanner s = new Scanner(System.in);
     String[][] board = new String[6][7];
 
-    System.out.println("\u001B[32mConnect Four!\nPress enter to start.");
+    System.out.println("\u001B[32mConnect Four!\nPress enter to a value to start from 1-7");
+    s.nextLine();
     int Userinput = s.nextInt();
     String player = "";
     fillBoard(board);
