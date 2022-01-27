@@ -6,7 +6,6 @@ public class ConnectFour {
     String[][] board = new String[6][7];
 
     System.out.println("\u001B[32mConnect Four!\nPress enter to a value to start from 1-7");
-    s.nextLine();
     int Userinput = s.nextInt();
     String player = "";
     fillBoard(board);
@@ -55,5 +54,8 @@ public class ConnectFour {
     }
    return board;
  }//end playTurn
+ public static String[][] PlayTurn2(int col, String[][] board){
+
+ }
 
 } // end class
